@@ -34,3 +34,9 @@ GNU Affero General Public License for more details.
 
 You should have received a copy of the GNU Affero General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+## how to
+
+write me a web console and terminal based on for debian 12 gnu linux to connect remote or local computers via ssh protocol and I want to write and run this code inside a virtualenv and please write a .gitignore for this virtualenv and all source code
+
+write me a web console and terminal based on for debian 12 gnu linux to connect remote or local computers via ssh protocol and I want to write and run this code inside a virtualenv and please write a .gitignore for this virtualenv and all source code
