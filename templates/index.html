@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Console</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.socket.io/4.1.2/socket.io.min.js"></script>
+</head>
+<body>
+    <h1>Web Console</h1>
+    <input type="text" id="hostname" placeholder="Hostname">
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <input type="text" id="command" placeholder="Command">
+    <button id="execute">Execute</button>
+    <pre id="output"></pre>
+
+    <script>
+        $(document).ready(function() {
+            var socket = io.connect('http://' + document.domain + ':' + location.port);
+
+            $('#execute').click(function() {
+                var hostname = $('#hostname').val();
+                var username = $('#username').val();
+                var password = $('#password').val();
+                var command = $('#command').val();
+
+                socket.emit('execute_command', {
+                    'hostname': hostname,
+                    'username': username,
+                    'password': password,
+                    'command': command
+                });
+            });
+
+            socket.on('command_output', function(data) {
+                $('#output').text(data.stdout + data.stderr);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+# Virtualenv
+venv/
+env/
+.venv/
+.env
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.swp
+*.swo
+*.swn
+*.bak
+
+# Flask
+*.log
+*.pot
+*.mo
+*.pyc
+*.pyo
+__pycache__/
+
+# Environment variables
+.env
+
+# System Files
+.DS_Store
+Thumbs.db
+*.~lock.*
+
+# JetBrains IDE files
+.idea/
+.vscode/
+
+# Coverage reports
+htmlcov/
+.tox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+
+# Test reports
+*.cover
+*.py,cover
+.tox
+noxfile_config.json
